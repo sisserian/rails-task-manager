@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Things you probably should have done yesterday:</h1>
+  <p>
+    <ul>
+      <% @tasks.each do |task| %>
+      <li>
+        <%= link_to task.title, task_path(task.id) %>
+        <%= link_to " - [Destroy me]", task_path(task.id), method: :delete, data: { confirm: "Are you sure?" } %>
+        </li>
+      <% end %>
+    </ul>
+  </p>
+  <hr>
+<button type="button" class="btn btn-light"><%= link_to "Add new task ͢ ", tasks_new_path  %></button>
+</div>

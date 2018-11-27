@@ -1,0 +1,10 @@
+<div class="container">
+  <hr>
+  <h2>Task details:</h2>
+  <hr>
+  <h3><%= @task.title %></h3>
+  <p><%= @task.details %></p>
+  <button type="button" class="btn btn-light"><%= link_to "Back to tasks", tasks_path %></button>
+  <button type="button" class="btn btn-warning"><%= link_to "Edit", edit_path %></button>
+</div>
+
